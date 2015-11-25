@@ -1,7 +1,7 @@
 require 'ffaker'
 
-namespace :spree_travel_flight do
-  desc 'Option Values, Properties, etc. for Flights'
+namespace :spree_travel_home_rental do
+  desc 'Option Values, Properties, etc. for Home Rental'
   task :load do
     sample_path = File.join(File.dirname(__FILE__), '..', '..', 'db', 'default', 'spree')
 
