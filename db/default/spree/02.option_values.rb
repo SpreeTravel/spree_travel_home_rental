@@ -1,17 +1,15 @@
 ### These are the option types
-travel_class = Spree::OptionType.find_by_name!("travel_class")
-travel_module = Spree::OptionType.find_by_name!("travel_module")
+room = Spree::OptionType.find_by_name!("home_room")
+plan = Spree::OptionType.find_by_name!("home_plan")
 
 ### This is the data
 option_values = [
-  {:name => "bussiness", :presentation => "Executive Class", :option_type => travel_class},
-  {:name => "economy", :presentation => "Economy Class", :option_type => travel_class},
-  {:name => "first", :presentation => "First Class", :option_type => travel_class},
-  {:name => "one_way", :presentation => "One Way", :option_type => travel_module},
-  {:name => "round_trip", :presentation => "Round Trip", :option_type => travel_module}
+  {:name => "room-standard", :presentation => "Standard", :option_type => room},
+  {:name => "room-superior", :presentation => "Superior", :option_type => room},
+  {:name => "plan-on-demand", :presentation => "On Demand", :option_type => plan}
 ]
 
 ### Creating Option Values
 option_values.each do |ov|
-  Spree::OptionValue.where(:name => ov[:name]).first_or_create(ov)
+  Spree::OptionValue.create(ov)
 end
