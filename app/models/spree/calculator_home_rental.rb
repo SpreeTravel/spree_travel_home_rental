@@ -1,5 +1,5 @@
 module Spree
-  class CalculatorFlight
+  class CalculatorHomeRental
 
     def self.calculate_price(context, variant, options)
       return [] if variant.rates.empty?
@@ -17,7 +17,7 @@ module Spree
         #combinations.each do |ad, ch|
         #  prices << self.get_rate_price(r, ad, ch)
         #end
-        next if (context.departure_date.to_date != r.start_date.to_date rescue false)
+        # next if (context.departure_date.to_date != r.start_date.to_date rescue false)
         prices << r
       end
       prices
