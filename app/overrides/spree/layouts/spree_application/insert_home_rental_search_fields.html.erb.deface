@@ -1,0 +1,17 @@
+<!-- insert_bottom 'div#tabcontent' -->
+<div id="home_rental" class="tab-pane fade active in">
+              <ul class="filtros_inline">
+              <li>
+                <label id="entradas_h"><%= t('check_in')%> <br>
+                  <input id="entrada_h" type="text" name="check_in_home_rental" value="<%#= check_in_home_rental %>" onchange="CompareDates('entrada_h', 'salida_h', 1, true)" class="datepicker">
+                </label>
+              </li>
+              <li>
+                <label id="salidas_h"><%= t('check_out')%> <br>
+                  <input id="salida_h" type="text" name="check_out_home_rental" value="<%#= check_out_home_rental %>" onchange="CompareDates('entrada_h', 'salida_h', 1, false)" class="datepicker">
+                </label>
+              </li>
+            </ul>
+                          
+</div>
+
